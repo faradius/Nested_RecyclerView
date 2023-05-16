@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.developerscracks.nestedrecyclerview.databinding.ItemChildSongBinding
 
-class ChildSongAdapter: ListAdapter<Song, RecyclerView.ViewHolder>(SongDiffCallback()) {
+class ChildSongAdapter(): ListAdapter<Song, RecyclerView.ViewHolder>(SongDiffCallback()) {
 
     private lateinit var context: Context
 
@@ -23,9 +23,14 @@ class ChildSongAdapter: ListAdapter<Song, RecyclerView.ViewHolder>(SongDiffCallb
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val song = getItem(position)
-        with(holder as ViewHolder){
+        with(holder as ViewHolder) {
             binding.tvChildName.text = song.name
-            binding.containerMain.setCardBackgroundColor(ContextCompat.getColor(context,song.color))
+            binding.containerMain.setCardBackgroundColor(
+                ContextCompat.getColor(
+                    context,
+                    song.color
+                )
+            )
         }
     }
 

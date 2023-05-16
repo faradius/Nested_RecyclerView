@@ -2,6 +2,7 @@ package com.developerscracks.nestedrecyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.developerscracks.nestedrecyclerview.databinding.ActivityMainBinding
 
@@ -17,6 +18,16 @@ class MainActivity : AppCompatActivity() {
 
         setupRecyclerView()
         getData()
+
+//        binding.searchView.setOnQueryTextListener(object: OnQueryTextListener{
+//            override fun onQueryTextSubmit(query: String?): Boolean {
+//                return false
+//            }
+//
+//            override fun onQueryTextChange(newText: String?): Boolean {
+//                return false
+//            }
+//        })
     }
 
     private fun setupRecyclerView() {

@@ -16,12 +16,23 @@ object FakeDataBase {
 
         )
 
+        val songRomaticList = listOf(
+            Song("Primera Vez", R.color.red_800),
+            Song("Corazon", R.color.pink_800),
+            Song("Luz del dia", R.color.purple_800),
+            Song("Amiga Mia", R.color.deep_purple_800),
+            Song("Si quisieras", R.color.indigo_800),
+            Song("Cariñosos", R.color.light_blue_800),
+            Song("Desprecio", R.color.cyan_800),
+            Song("Sin amigos", R.color.teal_800),
+            Song("Una vez fui", R.color.green_800),
+            Song("Hata que te conoci", R.color.blue_grey_800),
+
+            )
+
         val musicGroupList = listOf(
             MusicGroup("Sigue escuchando...", songList),
-            MusicGroup("Tu ultima playlist", songList),
-            MusicGroup("Descubre", songList),
-            MusicGroup("Las más escuchadas", songList),
-            MusicGroup("Top 90s", songList),
+            MusicGroup("Tu ultima playlist", songRomaticList)
         )
 
         return musicGroupList.shuffled()

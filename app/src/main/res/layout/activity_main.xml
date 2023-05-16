@@ -11,12 +11,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+        <SearchView
+            android:id="@+id/searchView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="¿Que escucharas hoy"
-            android:textAppearance="?attr/textAppearanceHeadline4"
-            android:gravity="center_horizontal"/>
+            android:layout_height="wrap_content"/>
             
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvParent"
